@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -18,7 +17,9 @@ body{
     'nav nav nav'
     'section section aside'
     'article article aside'
+    'gallery gallery gallery'
     'footer footer footer';
+  gap:5px;
 }
 header{
     grid-area: header;
@@ -29,6 +30,9 @@ header{
     padding: 10px;
 }
 nav {
+    position:fixed;
+    top:0;
+    width: 100%;
     background-color: black;
     padding: 10px 2px;
     grid-area: nav;
@@ -55,9 +59,27 @@ aside{
     grid-area: aside;
     padding: 10px;
 }
+/* Gallery */
+#gallery{
+  grid-area:gallery;
+  display:flex;
+  margin:10px 0;
+  flex-flow:row wrap;
+  gap:7px;
+  justify-content:center;
+  align-items:center;
+}
+.img{
+  width:200px;
+  height:200px;
+  background-color: black;
+}
 footer{
     background-color: rgb(241, 196, 145);
     padding: 10px;
     text-align: center;
     grid-area: footer;
+    position:fixed;
+    bottom:0;
+    width: 100%;
 }
